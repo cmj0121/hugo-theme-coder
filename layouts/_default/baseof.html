@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+  <head>
+    {{/* The global site configurations including the HTML meta tags,
+       * the favicon, the CSS stylesheets and the JavaScript files.
+       */}}
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+  {{/* The body of the page. You can override this block in your
+     * templates to add your own content. The header and footer
+     * partials are included here.
+     */}}
+  {{ block "body" . }}
+    <header>
+      {{/* The header partial includes the navigation bar. */}}
+      {{ partial "header.html" . }}
+    </header>
+
+    <main>
+      {{/* The main content of the page. */}}
+      {{ block "main" . }}
+        {{/* The subject of the page. */}}
+        {{ block "subject" . }}{{ end }}
+
+        {{/* The content of the page. */}}
+        {{ block "content" . }}{{ .Content }}{{ end }}
+      {{ end }}
+    </main>
+
+    <footer>
+      {{/* The footer partial includes the footer content. */}}
+      {{ partial "footer.html" . }}
+    </footer>
+  {{ end }}
+  </body>
+</html>

@@ -1,0 +1,16 @@
+name = 'coder'
+license = 'MIT'
+licenselink = 'https://github.com/cmj0121/hugo-theme-coder/LICENSE'
+description = 'Hugo theme for the coder blogger'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/cmj0121/hugo-theme-coder'
+
+# Taxonomy terms
+tags = ['blog', 'coder']
+features = []
+
+# If the theme has a single author
+[author]
+  name = 'cmj'
+  homepage = 'https://github.com/cmj0121'
