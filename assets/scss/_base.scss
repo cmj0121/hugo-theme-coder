@@ -47,6 +47,30 @@ img {
   margin: 1em auto;
 }
 
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 0 1em;
+    padding-top: 0.7em;
+
+    &:not(:first-child) {
+      border-left: 2px solid var(--color-text);
+    }
+  }
+
+  th {
+    font-style: bold;
+    font-size: 1.25em;
+
+    text-align: center;
+    padding-bottom: 0.5em;
+
+    border-bottom: 2px solid var(--color-text);
+  }
+}
+
 header {
   width: 100%;
   padding: 1em 2em;
