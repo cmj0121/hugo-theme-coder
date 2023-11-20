@@ -30,12 +30,19 @@ a {
   }
 }
 
+hr {
+  width: 100%;
+  border: 1px solid var(--color-muted);
+}
+
 header {
   width: 100%;
   padding: 1em 2em;
 }
 
 main {
+  max-width: 800px;
+
   display: flex;
   flex: 1;
 
