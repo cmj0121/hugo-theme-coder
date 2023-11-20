@@ -17,3 +17,11 @@
 .center {
   text-align: center;
 }
+
+.content {
+  > blockquote:first-child {
+    color: var(--color-muted);
+    font-style: italic;
+    border-left: none;
+  }
+}

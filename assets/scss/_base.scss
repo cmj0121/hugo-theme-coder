@@ -35,6 +35,13 @@ hr {
   border: 1px solid var(--color-muted);
 }
 
+blockquote {
+  border-left: 0.3em solid var(--color-secondary);
+
+  padding-left: 0.4em;
+  margin-left: 1em;
+}
+
 header {
   width: 100%;
   padding: 1em 2em;
