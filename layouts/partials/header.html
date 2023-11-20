@@ -1,7 +1,11 @@
 <div class="container">
   <span>
     <label>
-      {{- .Site.Params.Username -}}@{{- .Site.Params.Hostname -}}: {{ partial "location.html" . }} $
+      {{- or .Site.Params.Username .Site.Params.Author.Username -}}
+      @
+      {{- or .Site.Params.Hostname .Site.Params.Author.Hostname -}}
+      :
+      {{ partial "location.html" . }} $
     </label>
   </span>
 
