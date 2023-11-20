@@ -1,9 +1,3 @@
-<div class="dropdown">
-  <span><label>{{- .Site.Params.Username -}}@{{- .Site.Params.Hostname -}}: ~ $</label></span>
-  <div class="dropdown-content">
-    <a href="{{- .Site.BaseURL -}}">HOME</a>
-    {{ range $opt := .Site.Params.menu }}
-    {{ if $opt.enabled }}<a href="{{- $opt.link -}}">{{- $opt.name -}}</a>{{ end }}
-    {{ end }}
-  </div>
-</div>
+<label>
+  {{- .Site.Params.Username -}}@{{- .Site.Params.Hostname -}}: {{ partial "location.html" . }} $
+</label>

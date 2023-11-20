@@ -1,0 +1,9 @@
+// The customized themes.
+.tag {
+  color: var(--color-light);
+  margin: 0 0.5em;
+
+  &:before {
+    content: "#";
+  }
+}
