@@ -1,6 +1,6 @@
 {{- with resources.Get "scss/main.scss" | resources.ToCSS }}
   {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    <link rel="stylesheet" href="{{ .RelPermalink }}?{{- now.UTC | time.Format "20030102T142028" -}}">
   {{- else }}
     {{- with . | resources.Minify | resources.Fingerprint }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
