@@ -1,0 +1,18 @@
+{{ $page := . }}
+
+{{ if eq $page.Kind "home" }}
+  {{/* Home page */}}
+  <label>~</label>
+{{ else if eq $page.Kind "section" }}
+  {{/* Post lists */}}
+  <label>/dev/{{ $page.Title | lower }}</label>
+{{ else if eq $page.Kind "taxonomy" }}
+  {{/* Tag lists */}}
+  <label>/dev/{{ $page.Title | lower }}</label>
+{{ else if eq $page.Kind "page" }}
+  {{/* Post */}}
+  <label>~/posts/{{ $page.Title | lower }}</label>
+{{ else if eq $page.Kind "term" }}
+  {{/* Tag */}}
+  <label>~/tags/{{ $page.Title | lower }}</label>
+{{ end }}
