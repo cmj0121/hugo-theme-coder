@@ -1,2 +1,9 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="dropdown">
+  <span><label>{{- .Site.Params.Username -}}@{{- .Site.Params.Hostname -}}: ~ $</label></span>
+  <div class="dropdown-content">
+    <a href="{{- .Site.BaseURL -}}">HOME</a>
+    {{ range $opt := .Site.Params.menu }}
+    {{ if $opt.enabled }}<a href="{{- $opt.link -}}">{{- $opt.name -}}</a>{{ end }}
+    {{ end }}
+  </div>
+</div>

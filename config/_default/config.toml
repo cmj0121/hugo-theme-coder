@@ -1,0 +1,15 @@
+[params]
+_merge = "deep"
+
+username = "root"
+hostname = "example.com"
+
+[[params.menu]]
+  enabled = true
+  name = "/dev/post"
+  link = "/posts"
+
+[[params.menu]]
+  enabled = false
+  name = "/dev/tag"
+  link = "/tags"
