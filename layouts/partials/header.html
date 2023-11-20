@@ -1,2 +1,18 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="container">
+  <span>
+    <label>
+      {{- or .Site.Params.Username .Site.Params.Author.Username -}}
+      @
+      {{- or .Site.Params.Hostname .Site.Params.Author.Hostname -}}
+      :
+      {{ partial "location.html" . }} $
+    </label>
+  </span>
+
+  <div class="right">
+    <a class="btn" href="{{- .Site.BaseURL -}}">$HOME</a>
+    {{ range $opt := .Site.Params.menu }}
+    {{ if $opt.enabled }}<a class="btn" href="{{- $opt.link -}}">{{- $opt.name -}}</a>{{ end }}
+    {{ end }}
+  </div>
+</div>

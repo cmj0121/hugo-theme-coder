@@ -1,7 +1,14 @@
-{{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+{{ define "content" }}
+<div class='container'>
+  <div class="content center">
+    <h1>{{ .Site.Title }}</h1>
+
+    <div class='items'>
+    {{ with $tags := .Site.Taxonomies.tags }}
+      {{ range $page := $tags.ByCount | first 5 }}
+      <a class='tag' href='/tags/{{ $page.Name }}'>{{ $page.Name }}</a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
 {{ end }}

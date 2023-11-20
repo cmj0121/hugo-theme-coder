@@ -3,3 +3,7 @@ title   = "Coder"
 
 theme    = "coder"
 themeDir = "../.."
+
+[params]
+  username = "root"
+  hostname = "example.com"

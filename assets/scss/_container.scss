@@ -1,0 +1,22 @@
+// The container implements the layout of the page.
+.container {
+  display: flex;
+  max-width: 1200px;
+
+  .content {
+    padding: 0 1rem;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+}
