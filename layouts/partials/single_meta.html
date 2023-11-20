@@ -3,20 +3,27 @@
 
 <div class="single_meta">
   <div class="row">
+    <i class="fa-regular fa-calendar-days"></i>
     <time class="timestamp" datetime="{{ $dateLabel }}">{{ $dateHuman }}</time>
   </div>
 
   <div class="row">
+    <i class="fa-solid fa-clock"></i>
     <label>{{ .Page.ReadingTime }} min read</label>
+  </div>
+
+  <div class="row">
+    <i class="fa-solid fa-cubes-stacked"></i>
     <label>{{ .Page.WordCount }} words</label>
   </div>
 
   <div class="row">
-    <div class="tags">
+    <i class="fa-solid fa-tags"></i>
+    <span class="tags">
       {{ range .Page.Params.tags }}
       <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
       {{ end }}
-    </div>
+    </span>
   </div>
 </div>
 
