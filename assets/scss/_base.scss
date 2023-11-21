@@ -102,4 +102,8 @@ footer {
   color: var(--color-muted);
 
   text-align: center;
+
+  a {
+    color: var(--color-muted-primary);
+  }
 }
