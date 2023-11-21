@@ -3,27 +3,29 @@
 
 <div class="single_meta">
   <div class="row">
-    <i class="fa-regular fa-calendar-days"></i>
-    <time class="timestamp" datetime="{{ $dateLabel }}">{{ $dateHuman }}</time>
-  </div>
+    <div class="item">
+      <i class="fa-regular fa-calendar-days"></i>
+      <label><time class="timestamp" datetime="{{ $dateLabel }}">{{ $dateHuman }}</time></label>
+    </div>
 
-  <div class="row">
-    <i class="fa-solid fa-clock"></i>
-    <label>{{ .Page.ReadingTime }} min read</label>
-  </div>
+    <div class="item">
+      <i class="fa-solid fa-clock"></i>
+      <label>{{ .Page.ReadingTime }} min read</label>
+    </div>
 
-  <div class="row">
-    <i class="fa-solid fa-cubes-stacked"></i>
-    <label>{{ .Page.WordCount }} words</label>
-  </div>
+    <div class="item">
+      <i class="fa-solid fa-cubes-stacked"></i>
+      <label>{{ .Page.WordCount }} words</label>
+    </div>
 
-  <div class="row">
-    <i class="fa-solid fa-tags"></i>
-    <span class="tags">
-      {{ range .Page.Params.tags }}
-      <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a>
-      {{ end }}
-    </span>
+    <div class="item">
+      <i class="fa-solid fa-tags"></i>
+      <span class="tags">
+        {{ range .Page.Params.tags }}
+        <label><a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a></label>
+        {{ end }}
+      </span>
+    </div>
   </div>
 </div>
 
