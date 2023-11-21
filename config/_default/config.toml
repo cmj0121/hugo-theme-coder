@@ -4,6 +4,8 @@ _merge = "deep"
 username = "johndoe"
 hostname = "example.com"
 
+hasCJKLanguage = true
+
   [params.author]
     username = "cmj"
     hostname = "example.com"

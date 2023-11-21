@@ -1,0 +1,32 @@
+{{ $dateLabel := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+{{ $dateHuman := .Date | time.Format "Jan 02, 2006" }}
+
+<div class="single_meta">
+  <div class="row">
+    <div class="item">
+      <i class="fa-regular fa-calendar-days"></i>
+      <label><time class="timestamp" datetime="{{ $dateLabel }}">{{ $dateHuman }}</time></label>
+    </div>
+
+    <div class="item">
+      <i class="fa-solid fa-clock"></i>
+      <label>{{ .Page.ReadingTime }} min read</label>
+    </div>
+
+    <div class="item">
+      <i class="fa-solid fa-cubes-stacked"></i>
+      <label>{{ .Page.WordCount }} words</label>
+    </div>
+
+    <div class="item">
+      <i class="fa-solid fa-tags"></i>
+      <span class="tags">
+        {{ range .Page.Params.tags }}
+        <label><a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a></label>
+        {{ end }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<hr />

@@ -20,3 +20,19 @@
     margin-left: auto;
   }
 }
+
+.row {
+  margin: 0.3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .item {
+    margin-right: 2em;
+  }
+
+  i {
+    display: inline-block;
+    margin-right: 0.3em;
+  }
+}

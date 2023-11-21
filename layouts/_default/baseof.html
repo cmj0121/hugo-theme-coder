@@ -21,10 +21,10 @@
       {{/* The main content of the page. */}}
       {{ block "main" . }}
         {{/* The subject of the page. */}}
-        {{ block "subject" . }}{{ end }}
+        <div class="subject">{{ block "subject" . }}{{ end }}</div>
 
         {{/* The content of the page. */}}
-        {{ block "content" . }}{{ .Content }}{{ end }}
+        <div class="content">{{ block "content" . }}{{ .Content }}{{ end }}</div>
       {{ end }}
     </main>
 
