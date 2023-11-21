@@ -24,6 +24,18 @@
     font-style: italic;
     border-left: none;
   }
+
+  h1, h2, h3 {
+    margin-top: 2em;
+  }
+
+  h3, h4 {
+    margin-left: 1em;
+  }
+
+  h5, h6 {
+    margin-left: 1.6em;
+  }
 }
 
 .highlight > pre {
