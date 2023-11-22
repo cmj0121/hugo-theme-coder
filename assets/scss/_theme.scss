@@ -68,3 +68,55 @@
 .m4 {
   margin-left: 2em;
 }
+
+.s1 {
+  display: inline-block;
+  width: 30px;
+}
+
+.s2 {
+  display: inline-block;
+  width: 80px;
+}
+
+.s3 {
+  display: inline-block;
+  width: 120px;
+}
+
+.s4 {
+  display: inline-block;
+  width: 240px;
+}
+
+.text-success {
+  color: var(--color-success) !important;
+}
+
+.text-warning {
+  color: var(--color-warn) !important;
+}
+
+.text-danger {
+  color: var(--color-danger) !important;
+}
+
+.text-muted {
+  color: var(--color-muted) !important;
+}
+
+.bg-success {
+  background-color: var(--color-success) !important;
+}
+
+.bg-warning {
+  background-color: var(--color-warn) !important;
+}
+
+.bg-danger {
+  background-color: var(--color-danger) !important;
+}
+
+.bg-muted {
+  background-color: var(--color-muted) !important;
+}
