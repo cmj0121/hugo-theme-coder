@@ -21,6 +21,10 @@
   }
 }
 
+.fill {
+  flex: 1;
+}
+
 .row {
   margin: 0.3em;
   display: flex;
@@ -34,5 +38,14 @@
   i {
     display: inline-block;
     margin-right: 0.3em;
+  }
+}
+
+.bricks {
+  .brick {
+    padding-right: 0.4em;
+    margin-right: 3px;
+
+    background-color: var(--color-text);
   }
 }

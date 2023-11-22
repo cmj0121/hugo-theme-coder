@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="fill">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <hr />
+
+  <ul class="no-bullets">
+  {{ range $page := .Pages }}
+    <li class="m4">
+      <a class="s3" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+      <span class="bricks">
+        {{ range $index, $page := $page.Pages }}
+          {{ if compare.Ge $index 40 }}
+          <span class="brick bg-danger"></span>
+          {{ else if compare.Ge $index 20 }}
+          <span class="brick bg-warning"></span>
+          {{ else if compare.Ge $index 10 }}
+          <span class="brick bg-success"></span>
+          {{ else }}
+          <span class="brick bg-muted"></span>
+          {{ end }}
+        {{ end }}
+      </span>
+    </li>
+  {{ end }}
+  </ul>
+</div>
+{{ end }}

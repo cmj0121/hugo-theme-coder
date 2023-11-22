@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="fill">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <hr />
+
+  <ul class="no-bullets">
+  {{ range $page := .Pages }}
+    <li class="m4">
+      <label>{{ $page.Date.Format "2006 Jan 02" }}</label>
+      <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+    </li>
+  {{ end }}
+  </ul>
+
+</div>
+{{ end }}
