@@ -4,6 +4,8 @@ title   = "Coder"
 theme    = "coder"
 themeDir = "../.."
 
+enableRobotsTXT = true
+
 [params]
   username = "root"
   hostname = "example.com"
