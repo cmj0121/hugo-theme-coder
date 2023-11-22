@@ -1,0 +1,6 @@
+<!-- SEO -->
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if .Description }}<meta name="description" content="{{ .Description }}">{{ end }}
+{{ if .Summary }}<meta name="abstract" content="{{ replace .Summary "\n" ". " }}">{{ end }}
+{{ if .Keywords }}<meta name="keywords" content="{{ delimit .Keywords ", " }}">{{ end }}
+{{ if .Params.tags }}<meta name="keywords" content="{{ delimit .Params.tags ", " }}">{{ end }}
