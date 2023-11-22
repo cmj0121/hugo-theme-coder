@@ -2,6 +2,7 @@
 // It should not related to any specific page or component.
 * {
   box-sizing: border-box;
+  line-height: 1.5em;
 }
 
 body {
@@ -37,6 +38,12 @@ p > code {
 	color: var(--color-danger);
 
   cursor: pointer;
+}
+
+ul {
+  &.no-bullets {
+    list-style-type: none;
+  }
 }
 
 hr {
