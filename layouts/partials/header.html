@@ -10,9 +10,10 @@
   </span>
 
   <div class="right">
-    <a class="btn" href="{{- .Site.BaseURL -}}">$HOME</a>
+    {{ $base_url := .Site.BaseURL }}
+    <a class="btn" href="{{- $base_url -}}">$HOME</a>
     {{ range $opt := .Site.Params.menu }}
-    {{ if $opt.enabled }}<a class="btn" href="{{- $opt.link -}}">{{- $opt.name -}}</a>{{ end }}
+    {{ if $opt.enabled }}<a class="btn" href="{{ $base_url }}/{{- $opt.link -}}">{{- $opt.name -}}</a>{{ end }}
     {{ end }}
   </div>
 </div>

@@ -11,7 +11,7 @@
     {{ range $page := $group.Pages }}
       <li class="m4">
         <label>{{ $page.Date.Format "Jan 02" }}</label>
-        <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+        <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
       </li>
     {{ end }}
   {{ end }}
