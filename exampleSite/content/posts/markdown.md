@@ -7,7 +7,6 @@ tags: ["markdown", "example"]
 
 > the first example of markdown
 
-
 This is a basic example of a Markdown document. Markdown is a lightweight markup language that you
 can use to add formatting to plain text. You can use Markdown to format text in GitHub comments,
 README files, Gists, and other documents.
@@ -15,15 +14,20 @@ README files, Gists, and other documents.
 More information about Markdown can be found in the official [Markdown Guide](https://www.markdownguide.org/).
 
 # Headers 1
+
 ## Headers 2
+
 ### Headers 3
+
 #### Headers 4
+
 ##### Headers 5
+
 ###### Headers 6
 
 ## Text Formatting
 
-You can make text **bold**, *italic*, ~~strikethrough~~ or `monospace`.
+You can make text **bold**, _italic_, ~~strikethrough~~ or `monospace`.
 
 ## Blockquotes
 

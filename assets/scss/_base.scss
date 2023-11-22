@@ -34,8 +34,8 @@ a {
 p > code {
   display: inline-block;
 
-	padding: 0 0.15em;
-	color: var(--color-danger);
+  padding: 0 0.15em;
+  color: var(--color-danger);
 
   cursor: pointer;
 }
@@ -67,7 +67,8 @@ table {
   margin: 0 auto;
   border-collapse: collapse;
 
-  th, td {
+  th,
+  td {
     padding: 0 1em;
     padding-top: 0.7em;
 
