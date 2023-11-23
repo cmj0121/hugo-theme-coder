@@ -1,8 +1,10 @@
-{{ define "subject" }}
-<h1 class="center">{{ .Title }}</h1>
-{{ partial "single_meta.html" . }}
-{{ end }}
+{{ define "main" }}
+<div class="fill">
+  <div class="subject">
+    <h1 class="center">{{ .Title }}</h1>
+    {{ partial "single_meta.html" . }}
+  </div>
 
-{{ define "content" }}
-  {{ .Content }}
+  <div class="content">{{ .Content }}</div>
+</div>
 {{ end }}

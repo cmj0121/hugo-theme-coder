@@ -1,12 +1,15 @@
 {{ define "main" }}
-<div class="fill">
+{{ $tags := where .Pages ".Pages.Len" "ge" .Site.Params.minTermsCount }}
+{{ $paginator := .Paginate $tags }}
+
+<div class="container column fill">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
   <hr />
 
-  <ul class="no-bullets">
-  {{ range $page := .Pages }}
+  <ul class="no-bullets fill">
+  {{ range $page := $paginator.Pages }}
     <li class="m4">
       <a class="s3" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
       <span class="bricks">
@@ -25,5 +28,7 @@
     </li>
   {{ end }}
   </ul>
+
+  {{ partial "paginator.html" $paginator }}
 </div>
 {{ end }}

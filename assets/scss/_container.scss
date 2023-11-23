@@ -23,6 +23,7 @@
 
 .fill {
   flex: 1;
+  height: 100%;
 }
 
 .row {
@@ -39,6 +40,12 @@
     display: inline-block;
     margin-right: 0.3em;
   }
+}
+
+.column {
+  margin: 0.3em;
+  display: flex;
+  flex-direction: column;
 }
 
 .bricks {

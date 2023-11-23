@@ -1,20 +1,19 @@
 {{ define "main" }}
-<div class="fill">
+<div class="container column fill">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
   <hr />
 
-  <ul class="no-bullets">
-  {{ range $group := .Pages.GroupByDate "2006" }}
-    <h2 class="m1">{{ $group.Key }}</h2>
-    {{ range $page := $group.Pages }}
-      <li class="m4">
-        <label>{{ $page.Date.Format "Jan 02" }}</label>
-        <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
-      </li>
-    {{ end }}
+  <ul class="no-bullets fill">
+  {{ range $page := .Paginator.Pages }}
+    <li class="m4 ellipsis">
+      <label>{{ $page.Date.Format "2006 Jan 02" }}</label>
+      <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    </li>
   {{ end }}
   </ul>
+
+  {{ partial "paginator.html" .Paginator }}
 </div>
 {{ end }}
