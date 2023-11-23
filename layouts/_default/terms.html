@@ -1,12 +1,12 @@
 {{ define "main" }}
-<div class="fill">
+<div class="container column fill">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
   <hr />
 
-  <ul class="no-bullets">
-  {{ range $page := .Pages }}
+  <ul class="no-bullets fill">
+  {{ range $page := .Paginator.Pages }}
     <li class="m4">
       <a class="s3" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
       <span class="bricks">
@@ -25,5 +25,7 @@
     </li>
   {{ end }}
   </ul>
+
+  {{ partial "paginator.html" .Paginator }}
 </div>
 {{ end }}
