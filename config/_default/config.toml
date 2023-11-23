@@ -3,6 +3,7 @@ _merge = "deep"
 
 username = "johndoe"
 hostname = "example.com"
+minTermsCount = 1
 
 hasCJKLanguage = true
 
