@@ -86,3 +86,11 @@
     background-color: var(--color-muted-primary);
   }
 }
+
+.ellipsis {
+  width: 80%;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

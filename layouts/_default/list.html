@@ -7,7 +7,7 @@
 
   <ul class="no-bullets fill">
   {{ range $page := .Paginator.Pages }}
-    <li class="m4">
+    <li class="m4 ellipsis">
       <label>{{ $page.Date.Format "2006 Jan 02" }}</label>
       <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
     </li>
