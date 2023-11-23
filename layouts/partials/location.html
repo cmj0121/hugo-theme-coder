@@ -1,2 +1,1 @@
-{{ $link := trim .RelPermalink "/" }}
-<label>{{ if $link }}~/{{- $link -}}{{ else }}~{{ end }}</label>
+<label>{{ if .Section }}~/{{- .Section -}}{{ else }}~{{ end }}</label>
