@@ -56,3 +56,18 @@
     background-color: var(--color-text);
   }
 }
+
+.toast {
+  position: fixed;
+  bottom: 2em;
+  right: 3em;
+
+  display: block;
+  padding: 0.5em 1em;
+  z-index: 99;
+
+  font-weight: bold;
+  color: var(--color-muted);
+  border-radius: 0.7em;
+  background-color: var(--color-warn);
+}
