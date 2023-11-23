@@ -29,12 +29,15 @@ You can configure the site with the following parameters in your config.toml fil
 [params]
   username = "root"
   hostname = "example.com"
+
+  minTermsCount = 1
 ```
 
-| Parameter | Description                    |
-| --------- | ------------------------------ |
-| username  | username shown in the menu bar |
-| hostname  | hostname shown in the menu bar |
+| Parameter     | Description                                      |
+| ------------- | ------------------------------------------------ |
+| username      | username shown in the menu bar                   |
+| hostname      | hostname shown in the menu bar                   |
+| minTermsCount | the minimal count of terms will be shown in list |
 
 [0]: https://github.com/cmj0121/hogo-theme-coder
 [1]: https://cmj0121.github.io/hugo-theme-coder/
