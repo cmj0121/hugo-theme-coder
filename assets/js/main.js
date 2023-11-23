@@ -4,6 +4,7 @@ const toast = (msg, timeout) => {
   var toast = document.createElement("div");
 
   toast.classList.add("toast");
+  toast.classList.add("fade");
   toast.innerText = msg;
 
   $(document).find("body").append(toast);
@@ -38,7 +39,7 @@ const selectAll = (el) => {
   console.log("copied");
 
   // pop a toasts
-  toast("Copied to clipboard", 1500);
+  toast("Copied to clipboard", 1800);
 };
 
 $(window).on("load", () => {
