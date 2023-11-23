@@ -12,8 +12,13 @@
   <div class="right">
     {{ $base_url := .Site.BaseURL }}
     <a class="btn" href="{{- $base_url -}}">$HOME</a>
-    {{ range $opt := .Site.Params.menu }}
-    {{ if $opt.enabled }}<a class="btn" href="{{ $base_url }}/{{- $opt.link -}}">{{- $opt.name -}}</a>{{ end }}
+
+    {{ range $opt := .Site.Sections }}
+    <a class="btn" href="{{ .RelPermalink -}}">~/{{- strings.ToLower .Name -}}</a>
+    {{ end }}
+
+    {{ range $key, $value := .Site.Taxonomies }}
+    {{ if $value }}<a class="btn" href="{{- $base_url -}}{{- $key -}}">~/{{- $key -}}</a>{{ end }}
     {{ end }}
   </div>
 </div>
