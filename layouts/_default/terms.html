@@ -1,5 +1,6 @@
 {{ define "main" }}
-{{ $min_terms_count := .Site.Params.minTermsCount }}
+{{ $tags := where .Pages ".Pages.Len" "ge" .Site.Params.minTermsCount }}
+{{ $paginator := .Paginate $tags }}
 
 <div class="container column fill">
   <h1>{{ .Title }}</h1>
@@ -8,28 +9,26 @@
   <hr />
 
   <ul class="no-bullets fill">
-    {{ range $page := .Paginator.Pages }}
-      {{ if compare.Ge $page.Pages.Len $min_terms_count }}
-        <li class="m4">
-          <a class="s3" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
-          <span class="bricks">
-            {{ range $index, $page := $page.Pages }}
-              {{ if compare.Ge $index 40 }}
-              <span class="brick bg-danger"></span>
-              {{ else if compare.Ge $index 20 }}
-              <span class="brick bg-warning"></span>
-              {{ else if compare.Ge $index 10 }}
-              <span class="brick bg-success"></span>
-              {{ else }}
-              <span class="brick bg-muted"></span>
-              {{ end }}
-            {{ end }}
-          </span>
-        </li>
-    {{ end }}
+  {{ range $page := $paginator.Pages }}
+    <li class="m4">
+      <a class="s3" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
+      <span class="bricks">
+        {{ range $index, $page := $page.Pages }}
+          {{ if compare.Ge $index 40 }}
+          <span class="brick bg-danger"></span>
+          {{ else if compare.Ge $index 20 }}
+          <span class="brick bg-warning"></span>
+          {{ else if compare.Ge $index 10 }}
+          <span class="brick bg-success"></span>
+          {{ else }}
+          <span class="brick bg-muted"></span>
+          {{ end }}
+        {{ end }}
+      </span>
+    </li>
   {{ end }}
   </ul>
 
-  {{ partial "paginator.html" .Paginator }}
+  {{ partial "paginator.html" $paginator }}
 </div>
 {{ end }}
