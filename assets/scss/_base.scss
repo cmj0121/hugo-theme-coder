@@ -49,6 +49,13 @@ ul {
   }
 }
 
+li {
+  ul,
+  ol {
+    padding-left: 1.2em;
+  }
+}
+
 hr {
   width: 100%;
   border: 1px solid var(--color-muted);
