@@ -27,7 +27,7 @@
       <i class="fa-solid fa-tags"></i>
       <span class="tags">
         {{ range .Page.Params.tags }}
-        {{ $term := ($site.Taxonomies.tags.Get .).Page }}
+        {{ $term := ($site.Taxonomies.tags.Get ( strings.ToLower . )).Page }}
         <label><a class="tag" href="{{- $term.RelPermalink }}">{{ . }}</a></label>
         {{ end }}
       </span>
