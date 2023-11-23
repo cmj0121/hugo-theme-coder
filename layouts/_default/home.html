@@ -5,8 +5,8 @@
 
     <div class='items'>
     {{ with $tags := .Site.Taxonomies.tags }}
-      {{ range $page := $tags.ByCount | first 5 }}
-      <a class='tag' href='/tags/{{ $page.Name }}'>{{ $page.Name }}</a>
+    {{ range $page := $tags.ByCount | first 5 }}
+      <a class='tag' href='{{- $page.Page.RelPermalink -}}'>{{ $page.Name }}</a>
       {{ end }}
     {{ end }}
   </div>

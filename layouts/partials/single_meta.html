@@ -1,3 +1,4 @@
+{{ $site := .Site }}
 {{ $dateLabel := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
 {{ $dateHuman := .Date | time.Format "Jan 02, 2006" }}
 
@@ -26,7 +27,8 @@
       <i class="fa-solid fa-tags"></i>
       <span class="tags">
         {{ range .Page.Params.tags }}
-        <label><a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a></label>
+        {{ $term := ($site.Taxonomies.tags.Get .).Page }}
+        <label><a class="tag" href="{{- $term.RelPermalink }}">{{ . }}</a></label>
         {{ end }}
       </span>
     </div>
