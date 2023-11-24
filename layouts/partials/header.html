@@ -11,14 +11,14 @@
 
   <div class="right">
     {{ $base_url := .Site.BaseURL }}
-    <a class="btn" href="{{- $base_url -}}">$HOME</a>
+    <a class="btn text" href="{{- $base_url -}}">$HOME</a>
 
     {{ range $opt := .Site.Sections }}
-    <a class="btn" href="{{ .RelPermalink -}}">~/{{- strings.ToLower .Name -}}</a>
+    <a class="btn text" href="{{ .RelPermalink -}}">~/{{- strings.ToLower .Name -}}</a>
     {{ end }}
 
     {{ range $key, $value := .Site.Taxonomies }}
-    {{ if $value }}<a class="btn" href="{{- $base_url -}}{{- $key -}}">~/{{- $key -}}</a>{{ end }}
+    {{ if $value }}<a class="btn text" href="{{- $base_url -}}{{- $key -}}">~/{{- $key -}}</a>{{ end }}
     {{ end }}
   </div>
 </div>

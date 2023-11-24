@@ -6,9 +6,9 @@
 <div class="paginator">
   {{ range $index, $page := $paginator.Pagers }}
     {{ if eq $cur_page $page }}
-      <span class="btn pager">{{ $page.PageNumber }}</span>
+      <span class="btn pager"><strong>{{ $page.PageNumber }}</strong></span>
     {{ else }}
-      <a class="btn pager" href="{{ $page.URL }}">{{ $page.PageNumber }}</a>
+      <a class="btn pager" href="{{ $page.URL }}"><strong>{{ $page.PageNumber }}</strong></a>
     {{ end }}
   {{ end }}
 </div>
