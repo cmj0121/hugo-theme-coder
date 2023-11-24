@@ -1,24 +1,24 @@
+{{ $username := ( or .Site.Params.Username .Site.Params.Author.Username) }}
+{{ $hostname := ( or .Site.Params.Hostname .Site.Params.Author.Hostname) }}
+{{ $location := partial "location.html" . }}
+
 <div class="container">
   <span>
-    <label>
-      {{- or .Site.Params.Username .Site.Params.Author.Username -}}
-      @
-      {{- or .Site.Params.Hostname .Site.Params.Author.Hostname -}}
-      :
-      {{ partial "location.html" . }} $
-    </label>
+    <span>
+      <span class="text-green">{{ $username }}</span>@<span class="text-cyan">{{ $hostname }}</span>: {{ $location }} $
+    </span>
   </span>
 
   <div class="right">
     {{ $base_url := .Site.BaseURL }}
-    <a class="btn" href="{{- $base_url -}}">$HOME</a>
+    <a class="btn text" href="{{- $base_url -}}">$HOME</a>
 
     {{ range $opt := .Site.Sections }}
-    <a class="btn" href="{{ .RelPermalink -}}">~/{{- strings.ToLower .Name -}}</a>
+    <a class="btn text" href="{{ .RelPermalink -}}">~/{{- strings.ToLower .Name -}}</a>
     {{ end }}
 
     {{ range $key, $value := .Site.Taxonomies }}
-    {{ if $value }}<a class="btn" href="{{- $base_url -}}{{- $key -}}">~/{{- $key -}}</a>{{ end }}
+    {{ if $value }}<a class="btn text" href="{{- $base_url -}}{{- $key -}}">~/{{- $key -}}</a>{{ end }}
     {{ end }}
   </div>
 </div>

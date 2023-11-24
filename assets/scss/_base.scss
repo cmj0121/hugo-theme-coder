@@ -21,7 +21,7 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-highlight);
 
   text-decoration: none;
 
@@ -62,7 +62,7 @@ hr {
 }
 
 blockquote {
-  border-left: 0.3em solid var(--color-secondary);
+  border-left: 0.3em solid var(--color-highlight);
 
   padding-left: 0.4em;
   margin-left: 1em;
@@ -71,6 +71,10 @@ blockquote {
 img {
   display: block;
   margin: 1em auto;
+}
+
+label {
+  margin-right: 1em;
 }
 
 table {
@@ -83,7 +87,7 @@ table {
     padding-top: 0.7em;
 
     &:not(:first-child) {
-      border-left: 2px solid var(--color-text);
+      border-left: 2px solid var(--color-fg);
     }
   }
 
@@ -94,7 +98,7 @@ table {
     text-align: center;
     padding-bottom: 0.5em;
 
-    border-bottom: 2px solid var(--color-text);
+    border-bottom: 2px solid var(--color-fg);
   }
 }
 
@@ -122,6 +126,6 @@ footer {
   text-align: center;
 
   a {
-    color: var(--color-muted-primary);
+    color: var(--color-hint);
   }
 }

@@ -10,13 +10,3 @@ hasCJKLanguage = true
   [params.author]
     username = "cmj"
     hostname = "example.com"
-
-  [[params.menu]]
-    enabled = true
-    name = "/dev/post"
-    link = "/posts"
-
-  [[params.menu]]
-    enabled = true
-    name = "/dev/tag"
-    link = "/tags"
