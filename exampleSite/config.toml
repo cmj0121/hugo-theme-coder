@@ -7,5 +7,5 @@ themeDir = "../.."
 enableRobotsTXT = true
 
 [params]
-  username = "root"
-  hostname = "example.com"
+  username = "guest"
+  hostname = "cmj0121.github.io"
