@@ -35,12 +35,16 @@
   width: 240px;
 }
 
+.text {
+  color: var(--color-text) !important;
+}
+
 .text-success {
   color: var(--color-success) !important;
 }
 
 .text-warning {
-  color: var(--color-warn) !important;
+  color: var(--color-warning) !important;
 }
 
 .text-danger {
@@ -56,7 +60,7 @@
 }
 
 .bg-warning {
-  background-color: var(--color-warn) !important;
+  background-color: var(--color-warning) !important;
 }
 
 .bg-danger {
