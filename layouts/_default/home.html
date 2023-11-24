@@ -1,7 +1,11 @@
 {{ define "content" }}
 <div class='container'>
   <div class="content center">
-    <h1>{{ .Site.Title }}</h1>
+
+    <h1>
+      {{ partial "hero.html" . }}
+      {{ .Site.Title }}
+    </h1>
 
     <div class='items'>
     {{ with $tags := .Site.Taxonomies.tags }}

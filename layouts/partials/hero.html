@@ -1,0 +1,7 @@
+{{ $hero := .Site.Params.Hero }}
+
+{{ if $hero.enabled }}
+<div class="hero">
+  <i class="fa fa-{{- $hero.icon -}}" aria-hidden="true"></i>
+</div>
+{{ end }}
