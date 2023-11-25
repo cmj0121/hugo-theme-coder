@@ -37,4 +37,15 @@
   h6 {
     font-size: 0.9em;
   }
+
+  ul {
+    padding-left: 0em;
+    margin-left: 0em;
+
+    li,
+    ol {
+      padding-left: 0.5em;
+      margin-left: 0.5em;
+    }
+  }
 }
