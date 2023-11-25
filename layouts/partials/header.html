@@ -10,12 +10,12 @@
   </span>
 
   <div class="right">
-    {{ $base_url := .Site.BaseURL }}
+    {{ $base_url := ( strings.TrimSuffix "/" .Site.BaseURL )}}
     <a class="btn text" href="{{- $base_url -}}"><i class="fa-solid fa-house-chimney"></i></a>
 
     {{ range $key, $value := .Site.Taxonomies }}
       {{ if $value }}
-        <a class="btn text" href="{{- $base_url -}}{{- $key -}}">
+        <a class="btn text" href="{{- $base_url -}}/{{- $key -}}">
           {{ if eq $key "tags" }}
           <i class="fa-solid fa-tags"></i>
           {{ else if eq $key "categories" }}

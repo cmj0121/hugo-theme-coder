@@ -6,7 +6,9 @@
 }
 
 body {
-  margin: 0;
+  width: 800px;
+
+  margin: 0 auto;
   min-height: 98vh;
 
   font-family: var(--font-family);
@@ -102,7 +104,7 @@ header {
 }
 
 main {
-  width: 800px;
+  width: 100%;
 
   display: flex;
   flex: 1;

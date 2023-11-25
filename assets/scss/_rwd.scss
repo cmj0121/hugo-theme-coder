@@ -2,11 +2,13 @@
 
 @media only screen and (max-width: 768px) {
   body {
+    width: 100%;
+
+    margin: 0 auto;
     font-size: 0.9rem;
     min-height: 100vh;
   }
   main {
-    width: 100%;
     padding: 0 0.6em;
   }
 
