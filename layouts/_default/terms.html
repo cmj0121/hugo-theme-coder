@@ -10,7 +10,7 @@
 
   <ul class="no-bullets fill">
   {{ range $page := $paginator.Pages }}
-    <li class="m4">
+    <li class="m2">
       <a class="s3" href="{{ $page.Permalink }}">{{ $page.Title }}</a>
       <span class="bricks">
         {{ range $index, $page := $page.Pages }}
