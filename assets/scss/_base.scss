@@ -22,13 +22,7 @@ body {
 
 a {
   color: var(--color-highlight);
-
   text-decoration: none;
-
-  &:focus,
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 p,
