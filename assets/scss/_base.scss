@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 98vh;
 
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -22,13 +22,7 @@ body {
 
 a {
   color: var(--color-highlight);
-
   text-decoration: none;
-
-  &:focus,
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 p,

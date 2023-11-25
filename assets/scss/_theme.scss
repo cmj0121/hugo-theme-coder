@@ -15,6 +15,14 @@
 .btn {
   padding: 0.5em 0.3em;
   color: var(--color-text);
+
+  &:hover {
+    filter: brightness(75%);
+  }
+
+  & i {
+    font-size: 1.3em;
+  }
 }
 
 .center {

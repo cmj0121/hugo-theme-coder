@@ -4,21 +4,33 @@
 
 <div class="container">
   <span>
-    <span>
+    <span id='location'>
       <span class="text-success">{{ $username }}</span>@<span class="text-highlight">{{ $hostname }}</span>: {{ $location }} $
     </span>
   </span>
 
   <div class="right">
     {{ $base_url := .Site.BaseURL }}
-    <a class="btn text" href="{{- $base_url -}}">$HOME</a>
-
-    {{ range $opt := .Site.Sections }}
-    <a class="btn text" href="{{ .RelPermalink -}}">~/{{- strings.ToLower .Name -}}</a>
-    {{ end }}
+    <a class="btn text" href="{{- $base_url -}}"><i class="fa-solid fa-house-chimney"></i></a>
 
     {{ range $key, $value := .Site.Taxonomies }}
-    {{ if $value }}<a class="btn text" href="{{- $base_url -}}{{- $key -}}">~/{{- $key -}}</a>{{ end }}
+      {{ if $value }}
+        <a class="btn text" href="{{- $base_url -}}{{- $key -}}">
+          {{ if eq $key "tags" }}
+          <i class="fa-solid fa-tags"></i>
+          {{ else if eq $key "categories" }}
+          <i class="fa-solid fa-folder"></i>
+          {{ else }}
+          <i class="fa-regular fa-circle-question"></i>
+          {{ end -}}
+        </a>
+      {{ end }}
+    {{ end }}
+
+    {{ range $opt := .Site.Sections }}
+    <a class="btn text" href="{{ $opt.RelPermalink -}}">
+      <i class="fa-solid fa-{{ strings.Substr ( strings.ToLower $opt.Name ) 0 1 }}"></i>
+    </a>
     {{ end }}
   </div>
 </div>
