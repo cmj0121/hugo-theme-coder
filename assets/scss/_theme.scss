@@ -114,3 +114,12 @@
     font-size: 800%;
   }
 }
+
+.cursor {
+  display: inline-block;
+
+  height: 1em;
+  width: 0.3em;
+  margin-left: 0.7em;
+  background-color: var(--color-dark-green);
+}
