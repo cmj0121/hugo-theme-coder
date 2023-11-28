@@ -8,6 +8,19 @@
   }
 }
 
+.typing {
+  &::after {
+    content: "";
+
+    display: inline-block;
+    height: 0.95em;
+    width: 0.6em;
+    border-right: 0.2em solid var(--color-text);
+
+    animation: typing 1s infinite;
+  }
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -23,5 +36,16 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
   }
 }
