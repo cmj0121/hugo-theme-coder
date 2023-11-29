@@ -27,6 +27,13 @@
   }
 }
 
+.draft {
+  &::before {
+    content: "(draft) ";
+    color: var(--color-red);
+  }
+}
+
 .center {
   text-align: center;
 }
