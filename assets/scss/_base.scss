@@ -69,6 +69,21 @@ img {
   margin: 1em auto;
 }
 
+pre {
+  padding: 0.7em;
+  border-radius: 0.5em;
+
+  background-color: var(--color-grey) !important;
+
+  overflow: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /*  for Chrome, Safari and Opera */
+  }
+}
+
 label {
   margin-right: 1em;
 }
