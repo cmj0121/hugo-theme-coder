@@ -39,6 +39,12 @@ li {
   }
 }
 
+pre > code {
+  span {
+    font-size: 0.98em !important;
+  }
+}
+
 ul {
   &.no-bullets {
     list-style-type: none;
@@ -73,7 +79,7 @@ pre {
   padding: 0.7em;
   border-radius: 0.5em;
 
-  background-color: var(--color-grey) !important;
+  background-color: var(--color-dark-grey) !important;
 
   overflow: scroll;
 
