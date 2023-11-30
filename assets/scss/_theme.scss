@@ -27,6 +27,13 @@
   }
 }
 
+.draft {
+  &::before {
+    content: "(draft) ";
+    color: var(--color-red);
+  }
+}
+
 .center {
   text-align: center;
 }
@@ -52,21 +59,6 @@
   h5,
   h6 {
     margin-left: 1.6em;
-  }
-}
-
-.highlight > pre {
-  padding: 0.7em;
-  border-radius: 0.5em;
-
-  background-color: var(--color-grey) !important;
-
-  overflow: scroll;
-
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  &::-webkit-scrollbar {
-    display: none; /*  for Chrome, Safari and Opera */
   }
 }
 

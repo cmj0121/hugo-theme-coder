@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="fill">
   <div class="subject">
-    <h1 class="center">{{ .Title }}</h1>
+    <h1 class="center {{ if .Draft }}draft{{ end }}">{{ .Title }}</h1>
     {{ partial "single_meta.html" . }}
   </div>
 
