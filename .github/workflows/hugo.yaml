@@ -34,7 +34,7 @@ jobs:
           pushd exampleSite || exit 1
 
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-          hugo --gc --minify --themesDir ../.. --theme hugo-theme-coder --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo -D --gc --minify --themesDir ../.. --theme hugo-theme-coder --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
