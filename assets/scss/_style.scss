@@ -15,6 +15,22 @@
   margin-left: 2em;
 }
 
+.p1 {
+  padding: 0.3em;
+}
+
+.p2 {
+  padding: 0.7em;
+}
+
+.p3 {
+  padding: 1.5em;
+}
+
+.p4 {
+  padding: 2em;
+}
+
 .s1 {
   display: inline-block;
   width: 30px;
@@ -73,4 +89,9 @@
 
 .bg-muted {
   background-color: var(--color-muted) !important;
+}
+
+.border {
+  border: 3px solid var(--color-muted);
+  border-radius: 0.7em;
 }
