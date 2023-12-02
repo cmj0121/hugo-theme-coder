@@ -1,10 +1,20 @@
 {{ define "main" }}
 <div class="fill">
+  <div id='_top'></div>
+
   <div class="subject">
     <h1 class="center {{ if .Draft }}draft{{ end }}">{{ .Title }}</h1>
     {{ partial "single_meta.html" . }}
   </div>
 
-  <div class="content">{{ .Content }}</div>
+  <article class="content">
+    <aside>
+      {{ .TableOfContents }}
+      <div class="container">
+        <a href='#_top' class="btn right"><i class="fa-solid fa-chevron-up"></i></a>
+      </div>
+    </aside>
+    <section>{{ .Content }}</section>
+  </article>
 </div>
 {{ end }}
