@@ -6,7 +6,7 @@
 }
 
 body {
-  width: 1000px;
+  width: var(--body-width);
 
   margin: 0 auto;
   min-height: 98vh;
@@ -121,8 +121,12 @@ table {
 
 article {
   display: flex;
+  width: 100%;
 
   section {
+    max-width: 100%;
+    width: calc(100% - var(--toc-width));
+
     > blockquote:first-child {
       color: var(--color-muted);
       font-style: italic;
@@ -131,7 +135,7 @@ article {
   }
 
   aside {
-    width: 200px;
+    width: var(--toc-width);
     height: 100%;
     margin-left: 1em;
 
