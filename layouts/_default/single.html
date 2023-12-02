@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="fill">
-  <div id='_top'></div>
+  {{ if and .Site.Params.toc ( ge ( len .TableOfContents ) 100 ) }}<div id='_top'></div>{{ end }}
 
   <div class="subject">
     <h1 class="center {{ if .Draft }}draft{{ end }}">{{ .Title }}</h1>
@@ -8,12 +8,14 @@
   </div>
 
   <article class="content">
+    {{ if and .Site.Params.toc ( ge (len .TableOfContents ) 100 ) }}
     <aside>
       {{ .TableOfContents }}
       <div class="container">
         <a href='#_top' class="btn right"><i class="fa-solid fa-chevron-up"></i></a>
       </div>
     </aside>
+    {{ end }}
     <section>{{ .Content }}</section>
   </article>
 </div>

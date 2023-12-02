@@ -5,6 +5,8 @@ username = "johndoe"
 hostname = "example.com"
 minTermsCount = 1
 
+toc = true
+
 hasCJKLanguage = true
 
   [params.author]
