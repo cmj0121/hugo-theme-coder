@@ -39,12 +39,6 @@
 }
 
 .content {
-  > blockquote:first-child {
-    color: var(--color-muted);
-    font-style: italic;
-    border-left: none;
-  }
-
   h1,
   h2,
   h3 {
@@ -114,4 +108,17 @@
   width: 0.3em;
   margin-left: 0.7em;
   background-color: var(--color-dark-green);
+}
+
+.fixed {
+  position: fixed;
+  display: inline-block;
+}
+
+.r0 {
+  right: 0;
+}
+
+.b0 {
+  bottom: 0;
 }
