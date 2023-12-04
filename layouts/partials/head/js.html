@@ -3,7 +3,7 @@
 {{- with resources.Get "js/main.js" }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
-      <script src="{{ .RelPermalink }}"></script>
+      <script src="{{ .RelPermalink }}?{{- now.UTC | time.Format "20030102T142028" -}}"></script>
     {{- end }}
   {{- else }}
     {{- $opts := dict "minify" true }}

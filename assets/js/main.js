@@ -18,22 +18,12 @@ const toast = (msg, timeout) => {
 };
 
 const selectAll = (el) => {
-  if (window.getSelection && document.createRange) {
-    var dom = el.target;
-    var sel = window.getSelection();
-    var range = document.createRange();
+  var range = document.createRange();
+  var sel = window.getSelection();
 
-    range.setStart(dom, 0);
-    range.setEnd(dom, 1);
-
-    sel.removeAllRanges();
-    sel.addRange(range);
-  } else if (document.selection && document.body.createTextRange) {
-    var textRange = document.body.createTextRange();
-
-    textRange.moveToElementText(el);
-    textRange.select();
-  }
+  range.selectNodeContents(el.currentTarget);
+  sel.removeAllRanges();
+  sel.addRange(range);
 
   document.execCommand("copy", null, "");
   console.log("copied");
