@@ -71,3 +71,19 @@
   border-radius: 0.7em;
   background-color: var(--color-warning);
 }
+
+.raw_html {
+  display: block;
+  padding: 0.4em;
+  margin-left: 1em;
+
+  border-left: 0.3em solid var(--color-light-red);
+
+  input {
+    width: 80%;
+    margin-bottom: 1em;
+
+    font-size: 1em;
+    padding: 0.3em;
+  }
+}
