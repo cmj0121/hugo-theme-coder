@@ -1,4 +1,9 @@
-<script src="https://cdn.jsdelivr.net/npm/cash-dom/dist/cash.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.5/cash.min.js"
+  integrity="sha512-rUmgzTTLW3Ncifitwec3TMK8qQJK17vYU7r7RjMnXfg2SoEWvVWn7doqhtB8j0KTIHIr3iv4CfOXXEJbPFll6Q=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 
 {{- with resources.Get "js/main.js" }}
   {{- if eq hugo.Environment "development" }}
