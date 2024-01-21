@@ -5,6 +5,8 @@
 [![Deploy][0]][1]
 ![Code Size][2]
 ![License][3]
+![Sonar Quality Gate][4]
+![Sonar Reliability][5]
 
 ---
 
@@ -25,3 +27,5 @@ $ hugo server
 [1]: https://github.com/cmj0121/hugo-theme-coder/actions/workflows/hugo.yaml
 [2]: https://img.shields.io/github/languages/code-size/cmj0121/hugo-theme-coder
 [3]: https://img.shields.io/github/license/cmj0121/hugo-theme-coder
+[4]: https://sonarcloud.io/api/project_badges/measure?project=cmj0121_hugo-theme-coder&metric=alert_status
+[5]: https://sonarcloud.io/api/project_badges/measure?project=cmj0121_hugo-theme-coder&metric=reliability_rating
