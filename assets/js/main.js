@@ -18,18 +18,26 @@ const toast = (msg, timeout) => {
 };
 
 const selectAll = (el) => {
+  let dom = el.currentTarget;
+  let text = dom.textContent;
+
   let range = document.createRange();
   let sel = window.getSelection();
 
-  range.selectNodeContents(el.currentTarget);
+  range.selectNodeContents(dom);
   sel.removeAllRanges();
   sel.addRange(range);
 
-  document.execCommand("copy", null, "");
-  console.log("copied");
-
-  // pop a toasts
-  toast("Copied to clipboard", 1800);
+  navigator.clipboard.writeText(text).then(
+    () => {
+      console.log("copied");
+      // pop a toasts
+      toast("Copied to clipboard", 1800);
+    },
+    (err) => {
+      console.log(err);
+    },
+  );
 };
 
 $(window).on("load", () => {
