@@ -1,4 +1,4 @@
-{{- with resources.Get "scss/main.scss" | resources.ToCSS }}
+{{- with resources.Get "scss/main.scss" | css.Sass }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}?{{- now.UTC | time.Format "20030102T142028" -}}">
   {{- else }}
